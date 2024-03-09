@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat 4.</title>
+</head>
+<body>
+
+    <div>
+        <input type="number" placeholder="Hét napjának száma" id="number">
+        <p id="anwser"></p>
+
+        <script>
+
+            const numberInput = document.getElementById("number");
+            const anwser = document.getElementById("anwser");
+
+            list = [1, 2, 3, 4, 5, 6, 7]
+
+            const number = parseInt(numberInput.value);
+
+            numberInput.addEventListener('input', () => {
+                if (number == 1) {
+                    anwser.textContent = "Hétfő";
+                }
+                if (number == 2) {
+                    anwser.textContent = "Kedd";
+                }
+                if (number == 3) {
+                    anwser.textContent = "Szerda";
+                }
+                if (number == 4) {
+                    anwser.textContent = "Csütörtök";
+                }
+                if (number == 5) {
+                    anwser.textContent = "Péntek";
+                }
+                if (number == 6) {
+                    anwser.textContent = "Szombat";
+                }
+                if (number == 7) {
+                    anwser.textContent = "Vasárnap";
+                } else {
+                    anwser.textContent = "Nem megfelelő számot adott meg!";
+                }
+            });
+
+        </script>
+
+    </div>
+    
+</body>
+</html>

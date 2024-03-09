@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat 2.</title>
+</head>
+<body>
+
+    <form>
+
+        <input type="text" id="lastName" placeholder="vezetéknév">
+        <br>
+        <input type="text" id="firstName" placeholder="keresztnév">
+        <br>
+        <input type="number" id="age" placeholder="életkor">
+        <p id="toWrite"></p>
+
+        <script>
+
+            var lastNameInput = document.getElementById("lastName");
+            var firstNameInput = document.getElementById("firstName");
+            var ageInput = document.getElementById("age");
+            var toWrite = document.getElementById("toWrite");
+
+            console.log(lastNameInput);
+            console.log(firstNameInput);
+            console.log(ageInput);
+
+            lastNameInput.addEventListener ('input', () => {
+                if (firstNameInput !== "" && lastNameInput !== "" && ageInput !== "") {
+                toWrite.textContent = lastNameInput + "" + firstNameInput + "" + ageInput + "év";
+            }    
+            });
+
+            firstNameInput.addEventListener ('input', () => {
+                if (firstNameInput !== "" && lastNameInput !== "" && ageInput !== "") {
+                toWrite.textContent = lastNameInput + "" + firstNameInput + "" + ageInput + "év";
+            }    
+            });
+
+            ageInput.addEventListener ('input', () => {
+                if (firstNameInput !== "" && lastNameInput !== "" && ageInput !== "") {
+                toWrite.textContent = lastNameInput + "" + firstNameInput + "" + ageInput + "év";
+            }    
+            });
+
+            
+
+        </script>
+
+    </form>
+    
+</body>
+</html>

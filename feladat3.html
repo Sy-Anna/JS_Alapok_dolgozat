@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat 3.</title>
+</head>
+<body>
+
+    <form>
+
+        <input type="text" placeholder="a oldal" id="a">
+        <input type="text" placeholder="b oldal" id="b">
+        <br>
+        <button id="submit" type="button">Számolj</button>
+        <p id="resoult"></p>
+
+        <script>
+
+            const aInput = document.getElementById("a");
+            const bInput = document.getElementById("b");
+            const submit = document.getElementById("submit");
+            const resoult = document.getElementById("resoult");
+
+            submit.addEventListener ('click', () => {
+                const a = parseFloat(aInput.value);
+                const b = parseFloat(bInput.value);
+
+                console.log(a);
+                console.log(b);
+
+                const terulet = a * b;
+                const kerulet = a * 2 + b * 2;
+
+                console.log(terulet);
+                console.log(kerulet);
+
+                resoult.textContent = "Terület: " + terulet + ", kerület: " + kerulet;
+                
+            });
+
+        </script>
+
+    </form>
+    
+</body>
+</html>

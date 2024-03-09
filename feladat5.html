@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat 5.</title>
+</head>
+<body>
+
+    <form>
+        <h3>Megrendelő adatai</h3>
+        <input type="text" id="name" placeholder="Teljes név">
+        <input type="tel" id="phone" placeholder="Telefonszám"><br>
+        <textarea name="address" id="address" cols="32" rows="1" placeholder="Irányítószám, város, utca, házszám"></textarea>
+
+        <h3>Pizza adatai</h3>
+        <select name="pizzaBase" id="pizzaBase">
+            <option value="tomato">paradicsomos</option>
+            <option value="sourcream">tejfölös</option>
+            <option value="bolognese">bolognai</option>
+        </select>
+
+        <p>Pizza feltéte</p>
+        <input type="checkbox" name="apply" value="kukorica" id="kukorica"><label for="kukorica">kukorica</label></br>
+        <input type="checkbox" name="apply" value="sonka" id="sonka"><label for="sonka">sonka</label></br>
+        <input type="checkbox" name="apply" value="pepperoni" id="pepperoni"><label for="pepperoni">pepperoni</label></br>
+        <input type="checkbox" name="apply" value="mozzarella" id="mozzarella"><label for="mozzarella">mozzarella</label></br>
+        <input type="checkbox" name="apply" value="kolbasz" id="kolbasz"><label for="kolbasz">kolbász</label></br>
+
+        <h3>Megjegyzés</h3>
+        <textarea name="Megjegyzés" id="other" cols="60" rows="10"></textarea><br>
+
+        <button type="submit" id="submit">Felvétel</button>
+
+        <script>
+
+            const name = document.getElementById("name");
+            const phone = document.getElementById("phone");
+            const address = document.getElementById("address");
+            const pizzaBase = document.getElementById("pizzaBase");
+            const submit = document.getElementById("submit");
+
+            let nev=name.value;
+            let szam = phone.value;
+            let cim = address.value;
+            let pizzaAlap = pizzaBase,value;
+            let kukorica= document.getElementById('kukorica').value;
+            let sonka= document.getElementById('sonka').value;
+            let pepperoni = document.getElementById('pepperoni').value;
+            let mozzarella = document.getElementById('mozzarella').value;
+            let kolbasz = document.getElementById('kolbasz').value;
+            let other = document.getElementById('other').value;
+
+            submit.addEventListener ('click', () => {
+                console.log(nev);
+                console.log(szam);
+                console.log(cim);
+                console.log(pizzaAlap);
+                console.log(kukorica);
+                console.log(sonka);
+                console.log(pepperoni);
+                console.log(mozzarella);
+                console.log(other);
+            })
+
+        </script>
+
+
+    </form>
+    
+</body>
+</html>
